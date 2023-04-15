@@ -1,37 +1,20 @@
-# This program calculates and displays the List of Grades for Modules.
+# This program calculates and displays the travel expenses and remaining balance
     # 06-04-2023
-    # CTI-110 P2HW2 - List
+    # CTI-110 P2HW1 - Travel Expense
     # Augustine Anquandah
-m1=float(input(" Enter grade for module 1 : "))
-m2=float(input("Enter grade for module 2 :"))
-m3=float(input("Enter grade for module 3 :"))
-m4=float(input("Enter grade for module 4 :"))
-m5=float(input("Enter grade for module 5 :"))
-m6=float(input("Enter grade for module 6  :"))
-
-grades=[ ]
-
-grades.append(m1)
-grades.append(m2)
-grades.append(m3)
-grades.append(m4)
-grades.append(m5)
-grades.append(m6)
-print("Grades list is: \n",grades)
-
-lg=min(grades)
-hg=max(grades)
-sg=sum(grades)
-avg=sg/6
-
-print("-----------------------------Results---------------------------")
-print("Lowest grade  :   ",lg)
-print("Highest grade :   ",hg)
-print("Sum of grades :   ",sg)
-print("Average            : %.2f"%avg)
-
-
-
-
-
-
+print("This program calculates and displays travel expenses")
+budget = float(input("Enter your budget : "))   
+destination = input("Enter your destination : ")    
+gas_expenses = float(input("How much you will spend on gas : "))    
+accomodation = float(input("Approximately how much you need for accomodation ? : "))    
+food_expenses = float(input("Last, how much do you need for food? : "))     
+remaining_balance = budget - gas_expenses - accomodation - food_expenses    
+print("---------Travel expenses-----------------")
+print("Location :       " + destination)
+print("Initial budget : " + str(budget))
+print("Fuel :           " + str(gas_expenses))
+print("Accomodation :   " + str(accomodation))
+print("Food :           " + str(food_expenses))
+print("--------------------------------------------")
+print()
+print("Remaining balance : " + str(remaining_balance))
